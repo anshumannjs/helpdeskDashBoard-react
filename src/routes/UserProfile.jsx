@@ -5,7 +5,7 @@ export default function UserProfile() {
   
   useEffect(()=>{
     async function fetchData(){
-      const res=await fetch(`${import.meta.env.VITE_EXPRESS_URL}/${sessionStorage.getItem("userId")}`)
+      const res=await fetch(`${import.meta.env.VITE_EXPRESS_URL}?id=${sessionStorage.getItem("userId")}`)
       const result=await res.json()
       console.log(result)
       if (result){
