@@ -14,7 +14,7 @@ export default function DashBoard() {
       setProgress(0)
       setSolved(0)
       setTotal(0)
-      const res=await fetch(`${import.meta.env.VITE_EXPRESS_URL}/ticket/ofUser/${sessionStorage.getItem("userId")}`, {method: "POST"})
+      const res=await fetch(`${import.meta.env.VITE_EXPRESS_URL}/ticket/ofUser?id=${sessionStorage.getItem("userId")}`)
       const result=await res.json()
       console.log(result)
       if (result){

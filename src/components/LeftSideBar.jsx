@@ -35,7 +35,7 @@ export default function LeftSideBar() {
   
     useEffect(()=>{
       async function fetchData(){
-        const res=await fetch(`${import.meta.env.VITE_EXPRESS_URL}/${sessionStorage.getItem("userId")}`, {method: "POST"})
+        const res=await fetch(`${import.meta.env.VITE_EXPRESS_URL}?id=${sessionStorage.getItem("userId")}`)
         const result=await res.json()
         console.log(result)
         if (result){
