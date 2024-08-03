@@ -26,7 +26,6 @@ export function SignUpForm({toggleLoginForm}) {
       method: "POST",
       body: JSON.stringify({email, password, firstName, lastName}),
       headers: {"Content-Type": "application/json"},
-      mode: "cors"
     })
     const result=await res.json()
     console.log(result)
