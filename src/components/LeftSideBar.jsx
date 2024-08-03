@@ -42,7 +42,9 @@ export default function LeftSideBar() {
           setUser(result)
         }
       }
-      fetchData()
+      if (sessionStorage.getItem("userId")){
+        fetchData()
+      }
     },[])
 
     console.log(user)
