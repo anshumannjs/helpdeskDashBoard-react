@@ -9,7 +9,7 @@ export default function TicketList() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch(`${import.meta.env.VITE_EXPRESS_URL}/ticket/ofUser/${sessionStorage.getItem("userId")}`)
+      const res = await fetch(`${import.meta.env.VITE_EXPRESS_URL}/ticket/ofUser/${sessionStorage.getItem("userId")}`, {method: "POST"})
       const result = await res.json()
       console.log(result)
       if (result) {
