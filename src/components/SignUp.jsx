@@ -25,7 +25,8 @@ export function SignUpForm({toggleLoginForm}) {
     const res=await fetch(`${import.meta.env.VITE_EXPRESS_URL}/auth/register`, {
       method: "POST",
       body: JSON.stringify({email, password, firstName, lastName}),
-      headers: {"Content-Type": "application/json"}
+      headers: {"Content-Type": "application/json"},
+      mode: "cors"
     })
     const result=await res.json()
     console.log(result)
